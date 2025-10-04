@@ -1,9 +1,11 @@
 'use client';
 
-import { ReactNode } from 'react';
+import { ReactNode, useState } from 'react';
 import { Zap, BarChart3, Settings2 } from 'lucide-react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
+import { WalletConnect } from './WalletConnect';
+import { User } from '@/lib/supabase';
 
 interface AppShellProps {
   children: ReactNode;
@@ -11,6 +13,7 @@ interface AppShellProps {
 
 export function AppShell({ children }: AppShellProps) {
   const pathname = usePathname();
+  const [currentUser, setCurrentUser] = useState<User | null>(null);
 
   const navItems = [
     { href: '/', icon: Zap, label: 'Projects' },
@@ -25,9 +28,12 @@ export function AppShell({ children }: AppShellProps) {
         <div className="max-w-6xl mx-auto px-4 sm:px-6 py-4">
           <div className="flex items-center justify-between">
             <h1 className="text-2xl font-bold text-gradient">HustleScope</h1>
-            <p className="text-sm text-text-muted hidden sm:block">
-              Kill it or scale it
-            </p>
+            <div className="flex items-center gap-4">
+              <p className="text-sm text-text-muted hidden sm:block">
+                Kill it or scale it
+              </p>
+              <WalletConnect onUserChange={setCurrentUser} />
+            </div>
           </div>
         </div>
       </header>

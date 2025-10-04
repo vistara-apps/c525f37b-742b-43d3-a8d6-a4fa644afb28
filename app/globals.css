@@ -1,0 +1,92 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Hustle Theme - High-energy, data-driven */
+  --color-bg: #1a1625;
+  --color-fg: #f8fafc;
+  --color-accent: #00ff41;
+  --color-border: #2d2438;
+  --color-surface: #221c2e;
+  --color-surface-hover: #2a2438;
+  --color-primary: #3b82f6;
+  --color-danger: #ef4444;
+  --color-warning: #fbbf24;
+  --color-text-muted: #94a3b8;
+
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 16px;
+  --radius-full: 9999px;
+
+  --spacing-xs: 4px;
+  --spacing-sm: 8px;
+  --spacing-md: 12px;
+  --spacing-lg: 20px;
+  --spacing-xl: 32px;
+
+  --shadow-card: 0 8px 24px rgba(0, 0, 0, 0.4);
+  --shadow-glow: 0 0 20px rgba(0, 255, 65, 0.3);
+  --shadow-widget: 0 4px 12px rgba(59, 130, 246, 0.15);
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  
+  body {
+    @apply bg-bg text-fg;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-bold tracking-tight;
+  }
+}
+
+@layer components {
+  .glass-card {
+    @apply bg-surface border border-border rounded-lg shadow-card;
+    backdrop-filter: blur(10px);
+  }
+
+  .btn-primary {
+    @apply bg-accent text-bg px-6 py-3 rounded-md font-medium hover:bg-opacity-90 transition-all duration-200 shadow-glow;
+  }
+
+  .btn-secondary {
+    @apply bg-surface text-fg px-6 py-3 rounded-md font-medium hover:bg-surface-hover transition-all duration-200 border border-border;
+  }
+
+  .btn-danger {
+    @apply bg-danger text-white px-6 py-3 rounded-md font-medium hover:bg-opacity-90 transition-all duration-200;
+  }
+
+  .metric-card {
+    @apply glass-card p-4 hover:bg-opacity-80 transition-all duration-200;
+  }
+
+  .timer-active {
+    @apply animate-pulse-glow;
+  }
+
+  .signal-badge-green {
+    @apply bg-accent bg-opacity-20 text-accent border border-accent rounded-full px-3 py-1 text-sm font-medium;
+  }
+
+  .signal-badge-yellow {
+    @apply bg-warning bg-opacity-20 text-warning border border-warning rounded-full px-3 py-1 text-sm font-medium;
+  }
+
+  .signal-badge-red {
+    @apply bg-danger bg-opacity-20 text-danger border border-danger rounded-full px-3 py-1 text-sm font-medium;
+  }
+}
+
+@layer utilities {
+  .text-gradient {
+    @apply bg-gradient-to-r from-accent to-primary bg-clip-text text-transparent;
+  }
+}

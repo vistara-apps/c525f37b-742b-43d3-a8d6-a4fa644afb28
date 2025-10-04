@@ -1,0 +1,30 @@
+{
+  "accountAssociation": {
+    "header": "",
+    "payload": "",
+    "signature": ""
+  },
+  "frame": {
+    "version": "1",
+    "name": "HustleScope",
+    "subtitle": "Built with Zara",
+    "description": "HustleScope is a Base Mini App built with Zara.",
+    "iconUrl": "https://0co.to/images/zara-2.png",
+    "homeUrl": "https://c525f37b742b43d3a8d6a4fa644afb28-5gsg.vercel.app",
+    "splashImageUrl": "https://c525f37b742b43d3a8d6a4fa644afb28-5gsg.vercel.app/splash.png",
+    "splashBackgroundColor": "#000000",
+    "heroImageUrl": "https://c525f37b742b43d3a8d6a4fa644afb28-5gsg.vercel.app/image.png",
+    "tagline": "HustleScope",
+    "screenshotUrls": [
+      "https://c525f37b742b43d3a8d6a4fa644afb28-5gsg.vercel.app/screenshot.png",
+      "https://c525f37b742b43d3a8d6a4fa644afb28-5gsg.vercel.app/screenshot.png"
+    ],
+    "primaryCategory": "social",
+    "tags": [
+      "base",
+      "miniapp",
+      "onchainkit"
+    ],
+    "webhookUrl": "https://c525f37b742b43d3a8d6a4fa644afb28-5gsg.vercel.app/api/webhook"
+  }
+}

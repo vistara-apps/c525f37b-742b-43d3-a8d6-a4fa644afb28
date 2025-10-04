@@ -1,0 +1,14 @@
+{
+  "name": "HustleScope",
+  "description": "HustleScope is a Base Mini App built with Zara.",
+  "image": "https://dummyimage.com/1200x628/0a0b0d/ffffff.png&text=OG",
+  "external_url": "https://c525f37b-742b-43d3-a8d6-a4fa644afb28.vercel.app",
+  "properties": {
+    "app": {
+      "name": "HustleScope",
+      "description": "HustleScope is a Base Mini App built with Zara.",
+      "url": "https://c525f37b-742b-43d3-a8d6-a4fa644afb28.vercel.app",
+      "icon": "https://0co.to/images/zara-2.png"
+    }
+  }
+}
